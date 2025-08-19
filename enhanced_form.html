@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #f8f8f8;
+      padding: 1rem;
+      border: 1px solid #ddd;
+    }
+    form {
+      max-width: 600px;
+      margin: 20px 0;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    section {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to the Enhanced HTML5 Form Page</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Information Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>Your full name</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>Your active email address</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Useful Tips</h2>
+      <ul>
+        <li>Fill all required fields</li>
+        <li>Use a strong password</li>
+        <li>Ensure your email is valid</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Registration Form</h2>
+      <form action="/submit" method="POST" autocomplete="on">
+        
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required autocomplete="name" />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="example@domain.com" required autocomplete="email" />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required minlength="6" />
+
+        <label for="birthdate">Date of Birth</label>
+        <input type="date" id="birthdate" name="birthdate" required />
+
+        <label for="age">Age (readonly)</label>
+        <input type="number" id="age" name="age" value="18" readonly />
+
+        <label for="bio">Short Bio</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself..."></textarea>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label>Newsletter Subscription</label>
+        <input type="radio" id="subscribe-yes" name="subscribe" value="yes" required />
+        <label for="subscribe-yes">Yes</label>
+        <input type="radio" id="subscribe-no" name="subscribe" value="no" />
+        <label for="subscribe-no">No</label>
+
+        <label for="interests">Select Your Interests</label>
+        <input type="checkbox" id="coding" name="interests" value="coding" />
+        <label for="coding">Coding</label>
+        <input type="checkbox" id="design" name="interests" value="design" />
+        <label for="design">Design</label>
+        <input type="checkbox" id="marketing" name="interests" value="marketing" />
+        <label for="marketing">Marketing</label>
+
+        <label for="experience">Experience (1-10)</label>
+        <input type="range" id="experience" name="experience" min="1" max="10" />
+
+        <label for="resume">Upload Resume</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" />
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+      </form>
+    </section>
+
+    <section>
+      <h2>Sample Image</h2>
+      <img src="https://via.placeholder.com/600x200.png?text=Sample+Image" alt="Sample banner image" width="100%" />
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced Forms Inc. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
